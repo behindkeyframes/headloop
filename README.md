@@ -1,6 +1,6 @@
 # HeadLoop v1.6
 
-A sophisticated 4-head looper with integrated tape recorder for Norns.
+A 4-head looper with integrated tape recorder for Norns.
 
 ## Overview
 
