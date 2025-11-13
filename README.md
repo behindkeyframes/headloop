@@ -1,4 +1,4 @@
-# HeadLoop v1.6
+# HeadLoop v2.O
 
 A 4-head looper with integrated tape recorder for Norns.
 
@@ -29,7 +29,6 @@ HeadLoop is a multi-head looper that provides independent control over 4 playbac
   - Adjustable resonance (Filter Q)
 - **Pitch Shifting** - ±24 semitones or ±2 octaves mode
 - **Stereo Panning** - Per-head positioning
-- **Delay Effect** - Global delay with per-head send levels
 - **Reverb** - Norns system reverb integration
 
 ### Tape FX
@@ -50,10 +49,7 @@ Tape simulation - minimal:
 - **Norns Interface** - Full control via keys and encoders
 - **Grid Support** - Optional Monome Grid or Midigrid integration
 - **Extensive MIDI Mapping**
-  - 9 CCs for head parameters
-  - 5 CCs for tape parameters
-  - 5 MIDI notes for tape actions
-  - All mappings user-configurable
+  - check attached Midi document for all cc
 
 ## Requirements
 
@@ -85,7 +81,7 @@ Tape simulation - minimal:
 
 ### Using the Tape Recorder
 
-1. Switch to Tape page: Press **K2+K3** together
+1. Switch to Tape page: Press **K2+K3** click & hold K2 / press K3
 2. Adjust tape send levels for each head using **E1** (select) and **E2/E3** (adjust)
 3. Press **K3** to start tape recording
 4. Press **K3** again to stop and play back
@@ -119,10 +115,10 @@ Each head has 9 independent parameters:
 | Pan | L to R | Stereo position |
 | Filter LP/HP | HP/Off/LP | Low-pass or high-pass filter |
 | Filter BP | 0.00 - 1.00 | Band-pass filter amount |
-| Delay | 0.00 - 1.00 | Delay send level |
+| Filter Q | 0.10 - 4.00 | Filter resonance |
 | Start | 0.00 - 1.00 | Loop start position |
 | End | 0.00 - 1.00 | Loop end position |
-| Filter Q | 0.10 - 4.00 | Filter resonance |
+
 
 ## Tape Parameters
 
@@ -133,88 +129,6 @@ Each head has 9 independent parameters:
 | Reverse | On/Off | Reverse tape playback |
 | Mute | On/Off | Mute tape (1s fade) |
 
-## MIDI Control
-
-### Default CC Mapping - Head Parameters
-
-| Parameter | Default CC |
-|-----------|------------|
-| Volume | CC 1 |
-| Pitch | CC 2 |
-| Pan | CC 3 |
-| Filter LP/HP | CC 4 |
-| Filter BP | CC 5 |
-| Filter Q | CC 6 |
-| Delay | CC 7 |
-| Start | CC 8 |
-| End | CC 9 |
-
-### Default CC Mapping - Tape Parameters
-
-| Parameter | Default CC |
-|-----------|------------|
-| Tape Send H1 | CC 10 |
-| Tape Send H2 | CC 11 |
-| Tape Send H3 | CC 12 |
-| Tape Send H4 | CC 13 |
-| Tape Volume | CC 14 |
-
-### Default Note Mapping - Tape Actions
-
-| Action | Default Note |
-|--------|--------------|
-| Tape Rec/Stop | C3 (60) |
-| Tape Overdub | C#3 (61) |
-| Tape Clear | D3 (62) |
-| Tape Mute | D#3 (63) |
-| Tape Reverse | E3 (64) |
-
-*All MIDI mappings are configurable in the PARAMS menu*
-
-## Parameters Menu
-
-Access via **K1** on Norns:
-
-### HeadLoop
-- Pitch Mode (Semitones/Octaves)
-
-### Reverb
-- Enable/Disable
-- Mix Level
-
-### Delay
-- Delay Time (0.01-2s)
-- Feedback (0-0.95)
-- Mix Level
-
-### Overdub
-- Overdub Level
-- Overdub Feedback
-
-### Clear Loop
-- Clear Fade Time (0-5s)
-
-### Tape FX
-- Enable/Disable
-- Wobble Amount
-- Saturation Amount
-- Age/Dropout Amount
-
-### Tape Recorder
-- Send Levels (H1-H4)
-- Volume
-- Length (10-300s)
-
-### LFOs (1-4)
-- Shape (Sine/Random)
-- Speed (0.01-20 Hz)
-- Depth (0-1)
-- Destination (21 options)
-
-### MIDI
-- Device Selection
-- CC Mappings
-- Note Mappings
 
 ## Grid Layout
 
@@ -264,4 +178,4 @@ Special thanks to the Norns and lines community.
 
 ---
 
-*HeadLoop v1.6 - A 4-head looper with tape recorder for Norns*
+*HeadLoop v2.0 - A 4-head looper with tape recorder for Norns*
